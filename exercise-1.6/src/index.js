@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 
 
-const App = () => {
-  const [clicks, setClicks] = useState({
-    good: 0, neutral: 0, bad: 0
-  })
 
+const App = () => {
+  const [clicks, setClicks] = useState(
+    { good: 0, neutral: 0, bad: 0
+  }) 
+  
   const goodClicks = () => 
     setClicks({...clicks, good: clicks.good + 1}) 
 
@@ -15,7 +16,7 @@ const App = () => {
 
     const badClicks = () => 
     setClicks({...clicks, bad: clicks.bad + 1})
-
+  
   return (
     <div>
       <h1>give feedback</h1>
